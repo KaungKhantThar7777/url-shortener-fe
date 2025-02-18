@@ -74,14 +74,28 @@ const UrlShortener = () => {
       {shortenedUrl && (
         <div className="mt-4 p-4 bg-green-100 rounded">
           <p className="font-medium">Shortened URL:</p>
+
           <a
             href={`https://${shortenedUrl.domain}/${shortenedUrl.shortened}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline break-all"
+            className="text-blue-500 flex-1 hover:underline break-all "
           >
             {`https://${shortenedUrl.domain}/${shortenedUrl.shortened}`}
           </a>
+
+          <button
+            className="ml-4 cursor-pointer "
+            type="button"
+            onClick={() => {
+              navigator.clipboard.writeText(
+                `https://${shortenedUrl.domain}/${shortenedUrl.shortened}`
+              );
+              alert("Copied to clipboard");
+            }}
+          >
+            Copy
+          </button>
         </div>
       )}
     </div>
