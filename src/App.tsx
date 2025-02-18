@@ -1,5 +1,5 @@
 import "./App.css";
-import UrlShortener, { ShortenedUrl } from "./UrlShortener";
+import UrlShortener, { type ShortenedUrl } from "./UrlShortener";
 import { useEffect, useState } from "react";
 
 function App() {
