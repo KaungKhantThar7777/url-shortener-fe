@@ -1,5 +1,5 @@
 import "./App.css";
-import UrlShortener from "./UrlShortener";
+import UrlShortener, { ShortenedUrl } from "./UrlShortener";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
 
       fetch(`https://url-shortener-be-u3bk.onrender.com/api/url/${shortCode}`)
         .then((response) => response.json())
-        .then((data) => {
-          if (data.originalUrl) {
-            window.location.href = data.originalUrl;
+        .then((data: ShortenedUrl) => {
+          if (data.url) {
+            window.location.href = data.url;
           } else {
             setError("URL not found");
           }

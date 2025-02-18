@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 
-type ShortenedUrl = {
+export type ShortenedUrl = {
   id: number;
   url: string;
   clicks: number;
