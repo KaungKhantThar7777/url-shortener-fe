@@ -12,7 +12,6 @@ type ShortenedUrl = {
 const UrlShortener = () => {
   const [url, setUrl] = useState("");
   const [shortenedUrl, setShortenedUrl] = useState<ShortenedUrl | null>(null);
-  console.log({ shortenedUrl });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
