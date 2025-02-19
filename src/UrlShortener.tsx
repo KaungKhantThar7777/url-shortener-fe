@@ -59,6 +59,7 @@ const UrlShortener = () => {
         />
 
         <button
+          aria-label="shorten button"
           type="submit"
           disabled={isLoading}
           className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
