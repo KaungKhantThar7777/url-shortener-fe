@@ -49,5 +49,6 @@ test("has short url and copy functionality", async ({ page }) => {
   const shortenedLink = page.getByRole("link");
   await expect(shortenedLink).toBeVisible();
   const href = await shortenedLink.getAttribute("href");
-  expect(href).toMatch(/^https:\/\/short-url7.netlify.app\/.+\/.+$/);
+
+  expect(href).toMatch(/^https:\/\/short-url7\.netlify\.app\/[A-Za-z0-9_-]+$/);
 });
